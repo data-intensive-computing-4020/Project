@@ -42,7 +42,6 @@ tab_t Join(const tab_t& a, size_t columna, const tab_t& b, size_t columnb) {
  
     for(i = 0; i < b.size(); ++i) {
         auto range = hashmap.equal_range(b[i][columnb]);
-        //int count = std::distance(range.first, range.second);
             for (int j = 0; j != std::distance(range.first, range.second); ++j)
             {
                 auto it = range.first;
@@ -52,13 +51,6 @@ tab_t Join(const tab_t& a, size_t columna, const tab_t& b, size_t columnb) {
                 row.insert(row.end(), b[i].begin(), b[i].end());
                 result.push_back(move(row));
             }
-            // for(auto it = range.first; it != range.second; ++it) 
-            // {
-            //         tab_t::value_type row;
-            //         row.insert(row.end(), a[it->second].begin(), a[it->second].end());
-            //         row.insert(row.end(), b[i].begin(), b[i].end());
-            //         result.push_back(move(row));
-            // }
     }
     clock_t end1 = clock();
     double elapsed_secs1 = double(end1 - begin1) / CLOCKS_PER_SEC;
