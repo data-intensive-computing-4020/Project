@@ -23,6 +23,9 @@ def printArray(array):
     for row in array:
         print(row)
 
+def chunkify(lst,n):
+    return [lst[i::n] for i in range(n)]
+
 
 def distribute(length, num_nodes):
     div = length // num_nodes  # divide and floor
@@ -60,17 +63,72 @@ if rank == 0:
     else:
         smallerTable = 1
 
-    numberOfRowsSmallerTable = len(eval("table" + str(smallerTable)))
-    workerIndecies = distribute(numberOfRowsSmallerTable, workers)
+    chunkedTable = chunkify(eval("table" + str(smallerTable)), size) #only chunk the smaller table
 
-    print("Workers: %d\nNumber of rows in smaller table: %d\nWorker indexes: %s" % (
-        workers,
-        numberOfRowsSmallerTable,
-        workerIndecies))
+    completeTable = eval("table" + str(smallerTable+(1%2)))
 
-    for index, row in enumerate(workerIndecies):
-        print("worker: %s operates on row %d to %d"%(index+1, row[0],row[1]))
-        comm.send(table)
+
+if rank != 0:
+    chunkedTable = None
+    completeTable = None
+
+chunkedTable = comm.scatter(chunkedTable, root=0)
+
+# print("Chunked table Rank %s, data: %s\n" % (rank, chunkedTable))
+
+# Broadcast the other table
+
+completeTable = comm.bcast(completeTable, root=0)
+
+# print("Complete table Rank %s, data: %s\n" % (rank, completeTable))
+
+joinedResults = []
+
+if (len(chunkedTable) >= len(completeTable)):
+    joinedResults = hashJoin(completeTable,0,chunkedTable,0)
+
+if (len(chunkedTable) < len(completeTable)):
+    joinedResults = hashJoin(chunkedTable,0,completeTable,0)
+
+print("Joined table Rank %s, data: %s\n" % (rank, joinedResults))
+
+
+finalJoinedTable = comm.gather(joinedResults,root=0)
+
+if rank == 0:
+    print("Final Results:")
+    print(finalJoinedTable)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # numberOfRowsSmallerTable = len(eval("table" + str(smallerTable)))
+    # workerIndecies = distribute(numberOfRowsSmallerTable, size)
+    #
+    # print("Workers: %d\nNumber of rows in smaller table: %d\nWorker indexes: %s" % (
+    #     workers,
+    #     numberOfRowsSmallerTable,
+    #     workerIndecies))
+    #
+    # for index, row in enumerate(workerIndecies):
+    #     print("worker: %s operates on row %d to %d"%(index+1, row[0],row[1]))
+        # comm.send(table)
 
     # comm.send(table1, dest=1)
     # comm.send(table2, dest=1)
