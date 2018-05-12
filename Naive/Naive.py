@@ -4,8 +4,7 @@ import sys
 import time
 import json
 
-# def Main(filename1, filename2):
-  
+
 file_1 = open('table1.json', 'r')
 table_1 = file_1.read()
 file_2 = open('table2.json', 'r')
@@ -22,9 +21,6 @@ for values_1 in table_1:
             value = values_1 + values_2
             joined_table.append(value)
 
-#joined_table = json.dumps(joined_table)
-
 with open('output.json', 'w') as output_file:
     json.dump(joined_table, output_file)
 
-#print(joined_table)
