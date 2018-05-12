@@ -1,16 +1,16 @@
 from __future__ import unicode_literals
-import sys
 import json
 from mpi4py import MPI
 from collections import defaultdict
-import numpy as np
-import random
+import time
 
+# MPI setup
 comm = MPI.COMM_WORLD
 size = comm.Get_size()
 workers = size - 1
 rank = comm.Get_rank()
 root = 0
+
 
 def hashJoin(table1, index1, table2, index2):
     h = defaultdict(list)
@@ -25,10 +25,12 @@ def printArray(array):
     for row in array:
         print(row)
 
+
 def chunkify(lst,n):
     return [lst[i::n] for i in range(n)]
 
 
+# function not used, because the
 def distribute(length, num_nodes):
     div = length // num_nodes  # divide and floor
     rem = length % num_nodes
@@ -60,12 +62,15 @@ if rank == 0:
     with open("table2.json", 'r') as table2File:
         table2 = json.load(table2File)
 
+    # Start the timer
+    startTime = time.time()
+
     if (len(table1) > len(table2)):
         smallerTable = 2
     else:
         smallerTable = 1
 
-    chunkedTable = chunkify(eval("table" + str(smallerTable)), size) #only chunk the smaller table
+    chunkedTable = chunkify(eval("table" + str(smallerTable)), size)  #only chunk the smaller table
 
     completeTable = eval("table" + str(1+(smallerTable%2)))
 
@@ -75,23 +80,18 @@ if rank != 0:
 
 chunkedTable = comm.scatter(chunkedTable, root=0)
 
-# print("Chunked table Rank %s, data: %s\n" % (rank, chunkedTable))
-
 # Broadcast the other table
 
 completeTable = comm.bcast(completeTable, root=0)
 
-# print("Complete table Rank %s, data: %s\n" % (rank, completeTable))
 
 joinedResults = []
 
-if (len(chunkedTable) >= len(completeTable)):
+if len(chunkedTable) >= len(completeTable):
     joinedResults = hashJoin(completeTable,0,chunkedTable,0)
 
-if (len(chunkedTable) < len(completeTable)):
+if len(chunkedTable) < len(completeTable):
     joinedResults = hashJoin(chunkedTable,0,completeTable,0)
-
-# print("Joined table Rank %s, data: %s\n" % (rank, joinedResults))
 
 comm.Barrier()
 
@@ -100,89 +100,7 @@ finalJoin = comm.gather(joinedResults, root=0)
 
 if rank == 0:
     flattendJoin = [item for sublist in finalJoin for item in sublist]
+    elapsedTime = time.time() - startTime
 
-    printArray(flattendJoin)
-
-
-
-    # print(finalJoin)
-
-# sendbuf = np.array(joinedResults)
-# # print("sendbuff {}".format(sendbuf))
-#
-#
-#
-# local_array = [rank] * random.randint(2, 5)
-# print("rank: {}, local_array: {}".format(rank, local_array))
-# print("rank: {}, local_array: {}".format(rank, joinedResults))
-#
-# # sendbuf = np.array(local_array)
-# print(sendbuf.dtype)
-#
-#
-# # Collect local array sizes using the high-level mpi4py gather
-# sendcounts = np.array(comm.gather(len(sendbuf), root))
-#
-# if rank == root:
-#     recvbuf = np.empty(sum(sendcounts), dtype=unicode)
-#
-# if rank != root:
-#     recvbuf = None
-#
-# comm.Gatherv(sendbuf=sendbuf, recvbuf=(recvbuf, sendcounts), root=root)
-# if rank == 0:
-#     print("Gathered array: {}".format(recvbuf))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # numberOfRowsSmallerTable = len(eval("table" + str(smallerTable)))
-    # workerIndecies = distribute(numberOfRowsSmallerTable, size)
-    #
-    # print("Workers: %d\nNumber of rows in smaller table: %d\nWorker indexes: %s" % (
-    #     workers,
-    #     numberOfRowsSmallerTable,
-    #     workerIndecies))
-    #
-    # for index, row in enumerate(workerIndecies):
-    #     print("worker: %s operates on row %d to %d"%(index+1, row[0],row[1]))
-        # comm.send(table)
-
-    # comm.send(table1, dest=1)
-    # comm.send(table2, dest=1)
-
-#     result = comm.recv()
-#     print("result:")
-#     printArray(result)
-#
-# elif rank == 1:
-#
-#     table1 = comm.recv()
-#     print ("rank %d: %s" % (rank, table1))
-#
-#     table2 = comm.recv()
-#     print ("rank %d: %s" % (rank, table2))
-#
-#     output = []
-#     for row in hashJoin(table1, 0, table2, 0):
-#         # print(row)
-#         output.append(row)
-#     comm.send(output,dest=0)
+    # printArray(flattendJoin)
+print("Nodes: %d \nTime: %s s" % (size, str(elapsedTime*1.0)))
