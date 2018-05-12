@@ -1,14 +1,16 @@
+from __future__ import unicode_literals
 import sys
 import json
 from mpi4py import MPI
 from collections import defaultdict
 import numpy as np
+import random
 
 comm = MPI.COMM_WORLD
 size = comm.Get_size()
 workers = size - 1
 rank = comm.Get_rank()
-
+root = 0
 
 def hashJoin(table1, index1, table2, index2):
     h = defaultdict(list)
@@ -65,8 +67,7 @@ if rank == 0:
 
     chunkedTable = chunkify(eval("table" + str(smallerTable)), size) #only chunk the smaller table
 
-    completeTable = eval("table" + str(smallerTable+(1%2)))
-
+    completeTable = eval("table" + str(1+(smallerTable%2)))
 
 if rank != 0:
     chunkedTable = None
@@ -90,14 +91,49 @@ if (len(chunkedTable) >= len(completeTable)):
 if (len(chunkedTable) < len(completeTable)):
     joinedResults = hashJoin(chunkedTable,0,completeTable,0)
 
-print("Joined table Rank %s, data: %s\n" % (rank, joinedResults))
+# print("Joined table Rank %s, data: %s\n" % (rank, joinedResults))
 
+comm.Barrier()
 
-finalJoinedTable = comm.gather(joinedResults,root=0)
+finalJoin = comm.gather(joinedResults, root=0)
+
 
 if rank == 0:
-    print("Final Results:")
-    print(finalJoinedTable)
+    flattendJoin = [item for sublist in finalJoin for item in sublist]
+
+    printArray(flattendJoin)
+
+
+
+    # print(finalJoin)
+
+# sendbuf = np.array(joinedResults)
+# # print("sendbuff {}".format(sendbuf))
+#
+#
+#
+# local_array = [rank] * random.randint(2, 5)
+# print("rank: {}, local_array: {}".format(rank, local_array))
+# print("rank: {}, local_array: {}".format(rank, joinedResults))
+#
+# # sendbuf = np.array(local_array)
+# print(sendbuf.dtype)
+#
+#
+# # Collect local array sizes using the high-level mpi4py gather
+# sendcounts = np.array(comm.gather(len(sendbuf), root))
+#
+# if rank == root:
+#     recvbuf = np.empty(sum(sendcounts), dtype=unicode)
+#
+# if rank != root:
+#     recvbuf = None
+#
+# comm.Gatherv(sendbuf=sendbuf, recvbuf=(recvbuf, sendcounts), root=root)
+# if rank == 0:
+#     print("Gathered array: {}".format(recvbuf))
+
+
 
 
 
