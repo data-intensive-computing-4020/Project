@@ -10,7 +10,7 @@ import hashlib
 class MRJoin(MRJob):
 		count = 0;
 		def steps(self):
-			return [MRStep(mapper = self.mapper_1, reducer = self.reducer_1)]
+			return [MRStep(mapper = self.mapper_1, reducer = self.reducer_1), MRStep(reducer = self.reducer_2)]
 
 		def mapper_1(self, _, line):
 		
@@ -59,6 +59,14 @@ class MRJoin(MRJob):
 					for x in range(0,len(B)):
 						temp = [A[y]] + [B[x]]
 						yield None, temp
+
+		def reducer_2(self, _, values):
+
+			output = []
+			print(type(values))
+			output.append(values)
+
+			#formatted_output = output
 
 			
 MRJoin.run()
