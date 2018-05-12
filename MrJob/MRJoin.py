@@ -34,9 +34,8 @@ class MRJoin(MRJob):
 				for num_val in values_list:
 					for i in num_val:
 						if i != 'A' and i != 'B':
-							
-							print(i[:])
-							output.append(i[:])
+							for x in i:
+								output.append(x)
 				yield None, output	
 				
 			elif num_values%2 == 0:
@@ -44,7 +43,7 @@ class MRJoin(MRJob):
 				B = values_list[len(values_list)/2:]
 				for y in range(0,len(A)):
 					for x in range(0,len(B)):
-						temp = [A[y][0]] + [B[x][0]]
+						temp = A[y][0] + B[x][0]
 						yield None, temp
 			elif num_values%2 == 1:
 				count = 0;
@@ -57,16 +56,16 @@ class MRJoin(MRJob):
 						B.append(j[0])
 				for y in range(0,len(A)):
 					for x in range(0,len(B)):
-						temp = [A[y]] + [B[x]]
+						temp = A[y] + B[x]
 						yield None, temp
 
 		def reducer_2(self, _, values):
 
 			output = []
-			print(type(values))
-			output.append(values)
+			for val in values:
+				output.append(val)
 
-			#formatted_output = output
 
-			
+			print(output)
+
 MRJoin.run()
