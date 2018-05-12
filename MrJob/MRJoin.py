@@ -8,7 +8,7 @@ import json
 import hashlib		
 
 class MRJoin(MRJob):
-		
+		count = 0;
 		def steps(self):
 			return [MRStep(mapper = self.mapper_1, reducer = self.reducer_1)]
 
@@ -22,16 +22,28 @@ class MRJoin(MRJob):
 				hash_key = hashlib.md5(value[0]).hexdigest()
 				
 				if filename == sys.argv[-2]:
-					yield (hash_key,x), value
+					yield hash_key, value
 				else:
-					yield (hash_key,x), value[1:]		
+					yield hash_key, value		
 				
-		def reducer_1(self, hash_key, value):
-			
+		def reducer_1(self, hash_key, values):
 			output = []
-			for val in value:
-				for x in val:
-					output.append(x)
-			yield hash_key[1],output
-   
+			values_list = list(values)
+			num_values = len(values_list)
+			if num_values == 2:
+				for num_val in values_list:
+					for i in num_val:
+						output.append(i)
+				yield None, output	
+				
+			elif num_values%2 == 0:
+				print(values_list)
+				A = values_list[:len(values_list)/2]
+				B = values_list[len(values_list)/2:]
+				
+				for y in range(0,len(A)):
+					for x in range(0,len(B)):
+						temp = A[y] + B[x]
+						yield None, temp
+			
 MRJoin.run()
