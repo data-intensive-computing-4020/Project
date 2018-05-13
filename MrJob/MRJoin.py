@@ -70,16 +70,22 @@ command_line = sys.argv
 join_field_1 = int(command_line[2])
 join_field_2 = int(command_line[4])
 output_file_name = command_line[5]
+benchmark_file_name = command_line[6]
 
 #Laura's sys.argv
 #sys.argv = [command_line[0], command_line[1], command_line[3], command_line[6]]
 sys.argv = [command_line[0], command_line[1], command_line[3]]
 
 final_output = []
+
 start_time = time.time()
 MRJoin.run()
 end_time = time.time()
 total_time = end_time-start_time
-print(total_time)
+
+with open(benchmark_file_name, 'w') as time_file:
+	json.dump(total_time, time_file)
+
+
 with open(output_file_name, 'w') as output_file:
 	json.dump(final_output, output_file)
