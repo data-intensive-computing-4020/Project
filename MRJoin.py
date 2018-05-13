@@ -1,5 +1,6 @@
 from mrjob.job import MRJob
 from mrjob.step import MRStep
+from prettytable import PrettyTable
 import re
 import os
 import sys
@@ -77,15 +78,19 @@ benchmark_file_name = command_line[6]
 sys.argv = [command_line[0], command_line[1], command_line[3]]
 
 final_output = []
+time_table = PrettyTable()
+time_table.field_names = ["Benchmark","Time taken"]
 
 start_time = time.time()
 MRJoin.run()
 end_time = time.time()
 total_time = end_time-start_time
 
-with open(benchmark_file_name, 'w') as time_file:
-	json.dump(total_time, time_file)
+time_table.add_row(["Total time", str(total_time)])
 
+time_write = open(benchmark_file_name, 'w')
+time_write.write("MRJoin results\n")
+time_write.write(str(time_table))
 
 with open(output_file_name, 'w') as output_file:
 	json.dump(final_output, output_file)
