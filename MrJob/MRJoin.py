@@ -76,7 +76,10 @@ output_file_name = command_line[5]
 sys.argv = [command_line[0], command_line[1], command_line[3]]
 
 final_output = []
+start_time = time.time()
 MRJoin.run()
-
+end_time = time.time()
+total_time = end_time-start_time
+print(total_time)
 with open(output_file_name, 'w') as output_file:
 	json.dump(final_output, output_file)
