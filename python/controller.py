@@ -23,7 +23,7 @@ else:
 # Naive join
 print(bcolors.UNDERLINE + "Joining naively..." + bcolors.ENDC)
 if int(os.system(
-        "python naive.py table1.json 0 table2.json 0 NaiveJoin_result_R{}_N{}.json NaiveJoin_benchmark_R{}_N{}.txt".format(rows,nodes,rows,nodes))) != 0:
+        "python naive.py table1.json 0 table2.json 0 NaiveJoin_result_R{}_N{}.json Benchmark_R{}_N{}.txt".format(rows,nodes,rows,nodes))) != 0:
     print(bcolors.FAIL + "Naive join failed" + bcolors.ENDC)
     sys.exit(1)
 else:
@@ -32,7 +32,7 @@ else:
 # MPI join
 print(bcolors.UNDERLINE + "Joining over MPI cluster..." + bcolors.ENDC)
 if int(os.system(
-        "mpirun -n {} python cluster.py table1.json 0 table2.json 0 MPIJoin_result_R{}_N{}.json MPIJoin_benchmark_R{}_N{}.txt".format(nodes,rows,nodes,rows,nodes))) != 0:
+        "mpirun -n {} python cluster.py table1.json 0 table2.json 0 MPIJoin_result_R{}_N{}.json Benchmark_R{}_N{}.txt".format(nodes,rows,nodes,rows,nodes))) != 0:
     print(bcolors.FAIL + "MPI cluster join failed" + bcolors.ENDC)
     sys.exit(1)
 else:
@@ -41,7 +41,7 @@ else:
 # MRJoin
 print(bcolors.UNDERLINE + "Joining over MRJoin..." + bcolors.ENDC)
 if int(os.system(
-        "python MRJoin.py table1.json 0 table2.json 0 MRJoin_result_R{}_N{}.json MRJoin_benchmark_R{}_N{}.txt".format(rows,nodes,rows,nodes))) != 0:
+        "python MRJoin.py table1.json 0 table2.json 0 MRJoin_result_R{}_N{}.json Benchmark_R{}_N{}.txt".format(rows,nodes,rows,nodes))) != 0:
     print(bcolors.FAIL + "MPI cluster join failed" + bcolors.ENDC)
     sys.exit(1)
 else:
