@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 import json
 from mpi4py import MPI
 from collections import defaultdict
+from prettytable import PrettyTable
 import time
 import sys
 
@@ -21,6 +22,19 @@ startTimeJoin = time.time()
 endTimeJoin = time.time()
 startTimeHashJoinFunction = time.time()
 endTimeJoinHashJoinFunction = time.time()
+startTimeReadFile1 = time.time()
+endTimeJoinReadFile1 = time.time()
+startTimeReadFile2 = time.time()
+endTimeJoinReadFile2 = time.time()
+startTimeScatter = time.time()
+endTimeScatter = time.time()
+startTimeBcast = time.time()
+endTimeBcast = time.time()
+startTimeBarrier = time.time()
+endTimeBarrier = time.time()
+startTimeGather = time.time()
+endTimeGather = time.time()
+
 
 
 
@@ -28,6 +42,7 @@ def hashJoin(table1, index1, table2, index2):
 
     h = defaultdict(list)
     # hash phase
+
     startTimeHash = time.time()
     for s in table1:
         h[s[index1]].append(s)
@@ -72,7 +87,7 @@ def distribute(length, num_nodes):
         node = node + 1
     return output
 
-if len(sys.argv) != 5:
+if len(sys.argv) != 7:
     if rank == 0:
         print("Please specify 4 parameters when running the program")
 
@@ -80,10 +95,13 @@ if len(sys.argv) != 5:
 
 
 if rank == 0:
+    # Start the timer
+    startTimeFullRun = time.time()
 
     table1FileName = str(sys.argv[2])
     table2FileName = str(sys.argv[4])
 
+    startTimeReadFile1 = time.time()
     table1 = []
     with open(table1FileName, 'r') as table1File:
         table1 = json.load(table1File)
@@ -91,9 +109,9 @@ if rank == 0:
     table2 = []
     with open(table2FileName, 'r') as table2File:
         table2 = json.load(table2File)
+    endTimeJoinReadFile1 = time.time()
+    elapsedTimeRead1 = str((endTimeJoinReadFile1 - startTimeReadFile1) * 1.0)
 
-    # Start the timer
-    startTimeFullRun = time.time()
 
     if len(table1) > len(table2):
         smallerTable = 2
@@ -108,11 +126,15 @@ if rank != 0:
     chunkedTable = None
     completeTable = None
 
+startTimeScatter = time.time()
 chunkedTable = comm.scatter(chunkedTable, root=0)
+endTimeScatter = time.time()
+
 
 # Broadcast the other table
-
+startTimeBcast = time.time()
 completeTable = comm.bcast(completeTable, root=0)
+endTimeBcast = time.time()
 
 
 joinedResults = []
@@ -124,19 +146,58 @@ if len(chunkedTable) >= len(completeTable):
 if len(chunkedTable) < len(completeTable):
     joinedResults = hashJoin(chunkedTable,0,completeTable,0)
 
+startTimeBarrier = time.time()
 comm.Barrier()
+endTimeBarrier = time.time()
 
+
+startTimeGather = time.time()
 finalJoin = comm.gather(joinedResults, root=0)
-
+endTimeGather = time.time()
 
 if rank == 0:
-    flattendJoin = [item for sublist in finalJoin for item in sublist]
+    outputFileName = sys.argv[5]
+    flattenedJoin = [item for sublist in finalJoin for item in sublist]
+    with open(outputFileName, 'w') as output_file:
+        json.dump(flattenedJoin, output_file)
+
+
     elapsedTimeFullRun = time.time() - startTimeFullRun
     print("Nodes: %d \nTime: %s s" % (size, str(elapsedTimeFullRun * 1.0)))
+
+
+
 
     # printArray(flattendJoin)
 
 elapsedTimeHash = str((endTimeHash - startTimeHash)*1.0)
 elapsedTimeJoin = str((endTimeJoin - startTimeJoin)*1.0)
 elapsedTimeHashJoinFunction = str((endTimeJoinHashJoinFunction - startTimeHashJoinFunction)*1.0)
-print("Process: %d, Hash time: %s, Join time: %s, HashJoin time: %s" % (rank, elapsedTimeHash, elapsedTimeJoin, elapsedTimeHashJoinFunction))
+elapsedTimeScatter = str((endTimeScatter - startTimeScatter)*1.0)
+elapsedTimeBcast = str((endTimeBcast - startTimeBcast)*1.0)
+elapsedTimeBarrier = str((endTimeBarrier - startTimeBarrier)*1.0)
+elapsedTimeGather = str((endTimeGather - startTimeGather)*1.0)
+# print("Process: %d, Hash time: %s, Join time: %s, HashJoin time: %s,  Scatter time: %s, Broadcast Time: %s, , Gather Time: %s"
+#       % (rank, elapsedTimeHash, elapsedTimeJoin, elapsedTimeHashJoinFunction, elapsedTimeScatter, elapsedTimeBcast, elapsedTimeGather))
+
+
+if rank == 0:
+    x = PrettyTable()
+
+    x.field_names = ["Benchmark", "Time (s)"]
+    x.add_row(["Processes", size])
+    x.add_row(["Read Files", elapsedTimeRead1])
+    x.add_row(["Hash Join", elapsedTimeHashJoinFunction])
+    x.add_row(["Scatter", elapsedTimeScatter])
+    x.add_row(["Broadcast", elapsedTimeBcast])
+    x.add_row(["Barrier", elapsedTimeBarrier])
+    x.add_row(["Gather", elapsedTimeGather])
+    x.add_row(["Total", elapsedTimeFullRun])
+
+    benchmarksFileName = sys.argv[6]
+    print(benchmarksFileName)
+    with open(benchmarksFileName, 'a+') as benchmarkFile:
+        benchmarkFile.write('***MPI Benchmark Results*** \n')
+        benchmarkFile.write(str(x))
+        benchmarkFile.write('\n')
+    benchmarkFile.close()
