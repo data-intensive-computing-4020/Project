@@ -7,6 +7,8 @@ import time
 import json	
 import hashlib		
 
+
+
 class MRJoin(MRJob):
 		
 		def steps(self):
@@ -67,8 +69,9 @@ class MRJoin(MRJob):
 			for val in values:
 				output.append(val)
 				
-			print(output)
-
+			#print(output)
+			global final_output
+			final_output = output
 
 command_line = sys.argv
 print(command_line)
@@ -76,7 +79,13 @@ print(command_line)
 join_field_1 = int(command_line[2])
 join_field_2 = int(command_line[4])
 output_file_name = command_line[5]
+#Laura's sys.argv
+#sys.argv = [command_line[0], command_line[1], command_line[3], command_line[6]]
 sys.argv = [command_line[0], command_line[1], command_line[3]]
 
 #python MRJoin.py table1.json 1 table2.json 1 output.json
+final_output = []
 MRJoin.run()
+
+with open(output_file_name, 'w') as output_file:
+	json.dump(final_output, output_file)
