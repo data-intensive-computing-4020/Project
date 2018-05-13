@@ -8,7 +8,7 @@ import json
 import hashlib		
 
 class MRJoin(MRJob):
-		count = 0;
+		
 		def steps(self):
 			return [MRStep(mapper = self.mapper_1, reducer = self.reducer_1), MRStep(reducer = self.reducer_2)]
 
@@ -19,11 +19,12 @@ class MRJoin(MRJob):
 			
 			for x in range(0, len(data)):
 				value = data[x]
-				hash_key = hashlib.md5(value[0]).hexdigest()
 				
 				if filename == sys.argv[1]:
+					hash_key = hashlib.md5(str(value[join_field_1])).hexdigest()
 					yield hash_key, (value, 'A')
 				else:
+					hash_key = hashlib.md5(str(value[join_field_2])).hexdigest()
 					yield hash_key, (value, 'B')		
 				
 		def reducer_1(self, hash_key, values):
@@ -62,11 +63,20 @@ class MRJoin(MRJob):
 
 		def reducer_2(self, _, values):
 
-			#yield _, values
 			output = []
 			for val in values:
 				output.append(val)
 				
 			print(output)
 
+
+command_line = sys.argv
+print(command_line)
+
+join_field_1 = int(command_line[2])
+join_field_2 = int(command_line[4])
+output_file_name = command_line[5]
+sys.argv = [command_line[0], command_line[1], command_line[3]]
+
+#python MRJoin.py table1.json 1 table2.json 1 output.json
 MRJoin.run()
