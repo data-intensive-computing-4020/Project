@@ -4,86 +4,77 @@ import re
 import os
 import sys
 import time	
-import json	
-import hashlib		
-
-
+import json		
 
 class MRJoin(MRJob):
 		
 		def steps(self):
-			return [MRStep(mapper = self.mapper_1, reducer = self.reducer_1), MRStep(reducer = self.reducer_2)]
+			return [MRStep(mapper = self.map_keys, reducer = self.reduce_keys), MRStep(reducer = self.reduce_for_output)]
 
-		def mapper_1(self, _, line):
-		
+		def map_keys(self, _, line):
 			filename = os.environ['map_input_file']
-			data = json.loads(line)
+			table = json.loads(line)
 			
-			for x in range(0, len(data)):
-				value = data[x]
-				
+			for record in table:
 				if filename == sys.argv[1]:
-					hash_key = hashlib.md5(str(value[join_field_1])).hexdigest()
-					yield hash_key, (value, 'A')
+					key = str(record[join_field_1])
+					yield key, (record, 'A')
 				else:
-					hash_key = hashlib.md5(str(value[join_field_2])).hexdigest()
-					yield hash_key, (value, 'B')		
+					key = str(record[join_field_2])
+					yield key, (record, 'B')		
 				
-		def reducer_1(self, hash_key, values):
+		def reduce_keys(self, key, records):
 			output = []
-			values_list = list(values)
-			num_values = len(values_list)
-			if num_values == 2:
-				for num_val in values_list:
+			records_list = list(records)
+			num_records = len(records_list)
+			if num_records == 2:
+				for num_val in records_list:
 					for i in num_val:
 						if i != 'A' and i != 'B':
 							output.append(i)
 				output = (output[0], output[1])
 				yield None, output	
 				
-			elif num_values%2 == 0:
-				A = values_list[:len(values_list)/2]
-				B = values_list[len(values_list)/2:]
-				for y in range(0,len(A)):
-					for x in range(0,len(B)):
-						temp = (A[y][0], B[x][0])
-						yield None, temp
+			elif num_records%2 == 0:
+				A = records_list[:len(records_list)/2]
+				B = records_list[len(records_list)/2:]
+				for y in A:
+					for x in B:
+						joined_value = (y[0], x[0])
+						yield None, joined_value
 
-			elif num_values%2 == 1:
+			elif num_records%2 == 1:
 				count = 0;
 				A = []
 				B = []
-				for j in values_list:
+				for j in records_list:
 					if j[1] == 'A':
 						A.append(j[0])
 					else:
 						B.append(j[0])
-				for y in range(0,len(A)):
-					for x in range(0,len(B)):
-						temp = (A[y], B[x])
-						yield None, temp
+				for y in A:
+					for x in B:
+						joined_value = (A, B)
+						yield None, joined_value
 
-		def reducer_2(self, _, values):
-
+		def reduce_for_output(self, _, records):
 			output = []
-			for val in values:
+			for val in records:
 				output.append(val)
 				
-			#print(output)
 			global final_output
 			final_output = output
 
 command_line = sys.argv
-print(command_line)
 
 join_field_1 = int(command_line[2])
 join_field_2 = int(command_line[4])
 output_file_name = command_line[5]
+
 #Laura's sys.argv
 #sys.argv = [command_line[0], command_line[1], command_line[3], command_line[6]]
 sys.argv = [command_line[0], command_line[1], command_line[3]]
 
-#python MRJoin.py table1.json 1 table2.json 1 output.json
 final_output = []
 MRJoin.run()
 
