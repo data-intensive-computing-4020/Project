@@ -45,13 +45,14 @@ def Naive(file1_name, index_1, file2_name, index_2, output_file_name, benchmark_
 
     benchmark_table = PrettyTable()
     benchmark_table.field_names = ["Benchmark", "Time (s)"]
+    benchmark_table.align["Benchmark"] = "l"
     benchmark_table.add_row(["Read both input files time: ", fileread_time])
     benchmark_table.add_row(["Join time: ", join_time])
     benchmark_table.add_row(["Write output file time: ", write_time])
     benchmark_table.add_row(["Total time: ", total_time])
     
-    print(type(benchmark_table))
     with open(benchmark_file_name, 'a+') as benchmark_file:
+        benchmark_file.write('\t \t \t ***Naive Benchmark Results*** ')
         benchmark_file.write(str(benchmark_table))
 
 command_line = sys.argv
@@ -63,4 +64,3 @@ output_file_name = command_line[5]
 benchmark_file_name = command_line[6]
 
 Naive(file1_name,index_1, file2_name, index_2, output_file_name, benchmark_file_name)
-
