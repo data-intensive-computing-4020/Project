@@ -101,6 +101,7 @@ finalJoin = comm.gather(joinedResults, root=0)
 if rank == 0:
     flattendJoin = [item for sublist in finalJoin for item in sublist]
     elapsedTime = time.time() - startTime
+    print("Nodes: %d \nTime: %s s" % (size, str(elapsedTime * 1.0)))
 
     # printArray(flattendJoin)
-print("Nodes: %d \nTime: %s s" % (size, str(elapsedTime*1.0)))
+
