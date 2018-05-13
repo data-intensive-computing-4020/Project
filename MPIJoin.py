@@ -186,7 +186,7 @@ if rank == 0:
     x = PrettyTable()
 
     x.field_names = ["Benchmark", "Time (s)"]
-    x.align["Benchmark"] = "1"
+    x.align["Benchmark"] = "l"
     x.add_row(["Processes", size])
     x.add_row(["Read Files", elapsedTimeRead1])
     x.add_row(["Hash Join", elapsedTimeHashJoinFunction])
