@@ -18,9 +18,11 @@ joined_table = []
 for values_1 in table_1:
     for values_2 in table_2:
         if values_1[0] == values_2[0]:
-            value = values_1 + values_2
+            value = (values_1, values_2)
+            #print(value)
             joined_table.append(value)
 
+print(joined_table)
 with open('output.json', 'w') as output_file:
     json.dump(joined_table, output_file)
 
