@@ -88,9 +88,11 @@ total_time = end_time-start_time
 
 time_table.add_row(["Total time", str(total_time)])
 
-time_write = open(benchmark_file_name, 'w')
-time_write.write("MRJoin results\n")
+time_write = open(benchmark_file_name, 'a+')
+time_write.write("***MRJoin Benchmark Results*** \n")
 time_write.write(str(time_table))
+time_write.write("\n\n")
+time_write.close()
 
 with open(output_file_name, 'w') as output_file:
 	json.dump(final_output, output_file)

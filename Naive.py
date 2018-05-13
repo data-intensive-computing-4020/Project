@@ -52,7 +52,7 @@ def Naive(file1_name, index_1, file2_name, index_2, output_file_name, benchmark_
     benchmark_table.add_row(["Total time: ", total_time])
     
     with open(benchmark_file_name, 'a+') as benchmark_file:
-        benchmark_file.write('\t \t \t ***Naive Benchmark Results*** \n')
+        benchmark_file.write('\t***Naive Benchmark Results*** \n')
         benchmark_file.write(str(benchmark_table))
         benchmark_file.write('\n \n')
     benchmark_file.close()

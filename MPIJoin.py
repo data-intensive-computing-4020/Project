@@ -98,8 +98,8 @@ if rank == 0:
     # Start the timer
     startTimeFullRun = time.time()
 
-    table1FileName = str(sys.argv[2])
-    table2FileName = str(sys.argv[4])
+    table1FileName = str(sys.argv[1])
+    table2FileName = str(sys.argv[3])
 
     startTimeReadFile1 = time.time()
     table1 = []
@@ -139,12 +139,16 @@ endTimeBcast = time.time()
 
 joinedResults = []
 
+index1 = int(sys.argv[2])
+index2 = int(sys.argv[4])
+
+
 if len(chunkedTable) >= len(completeTable):
     endTimeJoinHashJoinFunction = time.time()
-    joinedResults = hashJoin(completeTable,0,chunkedTable,0)
+    joinedResults = hashJoin(completeTable,index1,chunkedTable,index2)
     endTimeJoinHashJoinFunction = time.time()
 if len(chunkedTable) < len(completeTable):
-    joinedResults = hashJoin(chunkedTable,0,completeTable,0)
+    joinedResults = hashJoin(chunkedTable,index2,completeTable,index1)
 
 startTimeBarrier = time.time()
 comm.Barrier()
@@ -163,9 +167,6 @@ if rank == 0:
 
 
     elapsedTimeFullRun = time.time() - startTimeFullRun
-    print("Nodes: %d \nTime: %s s" % (size, str(elapsedTimeFullRun * 1.0)))
-
-
 
 
     # printArray(flattendJoin)
@@ -185,6 +186,7 @@ if rank == 0:
     x = PrettyTable()
 
     x.field_names = ["Benchmark", "Time (s)"]
+    x.align["Benchmark"] = "1"
     x.add_row(["Processes", size])
     x.add_row(["Read Files", elapsedTimeRead1])
     x.add_row(["Hash Join", elapsedTimeHashJoinFunction])
@@ -195,9 +197,8 @@ if rank == 0:
     x.add_row(["Total", elapsedTimeFullRun])
 
     benchmarksFileName = sys.argv[6]
-    print(benchmarksFileName)
     with open(benchmarksFileName, 'a+') as benchmarkFile:
         benchmarkFile.write('***MPI Benchmark Results*** \n')
         benchmarkFile.write(str(x))
-        benchmarkFile.write('\n')
+        benchmarkFile.write('\n\n')
     benchmarkFile.close()
