@@ -153,7 +153,7 @@ if len(chunkedTable) < len(completeTable):
     joinedResults = hashJoin(chunkedTable,index2,completeTable,index1)
 
 startTimeBarrier = time.time()
-comm.Barrier()
+# comm.Barrier()
 endTimeBarrier = time.time()
 
 
