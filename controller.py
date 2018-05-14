@@ -12,12 +12,13 @@ if (len(sys.argv) != 4):
 rows = sys.argv[1]
 nodes = sys.argv[2]
 groupToRun = (sys.argv[3]).upper()
+generatormode = sys.argv[4]
 
 os.system("rm Benchmark_R{}_N{}.txt".format(rows,nodes))
 
 # Input generation
 print(bcolors.UNDERLINE + "Generating tables..." + bcolors.ENDC)
-if int(os.system("python generator.py {} table1.json table2.json".format(rows))) != 0:
+if int(os.system("python generator.py {} table1.json table2.json {}".format(rows,generatormode))) != 0:
     print(bcolors.FAIL + "Tables generated failed" + bcolors.ENDC)
     sys.exit(1)
 else:
