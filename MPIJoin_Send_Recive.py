@@ -133,6 +133,8 @@ if rank == 0:
     endTimeSend = time.time()
 
 
+comm.Barrier()
+
 if rank != 0:
 
     req = comm.irecv(source=0,tag=0)
@@ -158,6 +160,8 @@ if len(chunkedTable) < len(completeTable):
 if rank !=0:
     req = comm.isend(joinedResults,dest=0,tag=rank)
     req.wait()
+
+comm.Barrier()
 
 if rank == 0:
     finalJoin = []
