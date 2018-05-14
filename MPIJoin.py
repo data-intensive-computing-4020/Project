@@ -185,7 +185,7 @@ elapsedTimeScatter = str((endTimeScatter - startTimeScatter)*1.0)
 elapsedTimeBcast = str((endTimeBcast - startTimeBcast)*1.0)
 elapsedTimeBarrier = str((endTimeBarrier - startTimeBarrier)*1.0)
 elapsedTimeGather = str((endTimeGather - startTimeGather)*1.0)
-elapsedTimeSaviour = str((startTime2 - endTime2)*1.0)
+elapsedTimeSaviour = str((endTime2 - startTime2)*1.0)
 # print("Process: %d, Hash time: %s, Join time: %s, HashJoin time: %s,  Scatter time: %s, Broadcast Time: %s, , Gather Time: %s"
 #       % (rank, elapsedTimeHash, elapsedTimeJoin, elapsedTimeHashJoinFunction, elapsedTimeScatter, elapsedTimeBcast, elapsedTimeGather))
 
