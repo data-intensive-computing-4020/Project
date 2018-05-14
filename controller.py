@@ -13,7 +13,7 @@ rows = sys.argv[1]
 nodes = sys.argv[2]
 groupToRun = (sys.argv[3]).upper()
 generatormode = sys.argv[4]
-loopNumber = sys.argv[5]
+loopNumber = int(sys.argv[5])
 
 
 
