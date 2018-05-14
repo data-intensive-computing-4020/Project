@@ -164,8 +164,9 @@ endTime2 = time.time()
 
 
 
-elapsedTimeFullRun = time.time() - startTimeFullRun
+
 if rank == 0:
+    elapsedTimeFullRun = time.time() - startTimeFullRun
     outputFileName = sys.argv[5]
     flattenedJoin = [item for sublist in finalJoin for item in sublist]
     with open(outputFileName, 'w') as output_file:
