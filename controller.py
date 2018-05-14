@@ -4,7 +4,7 @@ import sys
 import os
 from colours import bcolors
 
-if (len(sys.argv) != 4):
+if (len(sys.argv) != 5):
     print(
         bcolors.FAIL + "Incorrect number of arguments provided. First argument corresponds to number of rows to generate in table and second corresponds to the number of nodes to run the cluster on" + bcolors.ENDC)
     sys.exit()
