@@ -38,7 +38,7 @@ if "N" in groupToRun:
 if "M" in groupToRun:
     print(bcolors.UNDERLINE + "Joining over MPI cluster..." + bcolors.ENDC)
     if int(os.system(
-            "mpirun -n {} python MPIJoin.py table1.json 0 table2.json 0 MPIJoin_result_R{}_N{}.json Benchmark_R{}.txt".format(nodes,rows,nodes,rows))) != 0:
+            "mpiexec -np {} -machinefile machinefile python MPIJoin.py table1.json 0 table2.json 0 MPIJoin_result_R{}_N{}.json Benchmark_R{}.txt".format(nodes,rows,nodes,rows))) != 0:
         print(bcolors.FAIL + "MPI cluster join failed" + bcolors.ENDC)
         sys.exit(1)
     else:
