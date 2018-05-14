@@ -137,6 +137,8 @@ completeTable = comm.bcast(completeTable, root=0)
 endTimeBcast = time.time()
 
 
+startTime2 = time.time()
+
 joinedResults = []
 
 index1 = int(sys.argv[2])
@@ -158,7 +160,11 @@ endTimeBarrier = time.time()
 startTimeGather = time.time()
 finalJoin = comm.gather(joinedResults, root=0)
 endTimeGather = time.time()
+endTime2 = time.time()
 
+
+
+elapsedTimeFullRun = time.time() - startTimeFullRun
 if rank == 0:
     outputFileName = sys.argv[5]
     flattenedJoin = [item for sublist in finalJoin for item in sublist]
@@ -166,7 +172,7 @@ if rank == 0:
         json.dump(flattenedJoin, output_file)
 
 
-    elapsedTimeFullRun = time.time() - startTimeFullRun
+
 
 
     # printArray(flattendJoin)
@@ -178,6 +184,7 @@ elapsedTimeScatter = str((endTimeScatter - startTimeScatter)*1.0)
 elapsedTimeBcast = str((endTimeBcast - startTimeBcast)*1.0)
 elapsedTimeBarrier = str((endTimeBarrier - startTimeBarrier)*1.0)
 elapsedTimeGather = str((endTimeGather - startTimeGather)*1.0)
+elapsedTimeSaviour = str((startTime2 - endTime2)*1.0)
 # print("Process: %d, Hash time: %s, Join time: %s, HashJoin time: %s,  Scatter time: %s, Broadcast Time: %s, , Gather Time: %s"
 #       % (rank, elapsedTimeHash, elapsedTimeJoin, elapsedTimeHashJoinFunction, elapsedTimeScatter, elapsedTimeBcast, elapsedTimeGather))
 
@@ -195,6 +202,7 @@ if rank == 0:
     x.add_row(["Barrier", elapsedTimeBarrier])
     x.add_row(["Gather", elapsedTimeGather])
     x.add_row(["Total", elapsedTimeFullRun])
+    x.add_row(["Saviour", elapsedTimeSaviour])
 
     benchmarksFileName = sys.argv[6]
     with open(benchmarksFileName, 'a+') as benchmarkFile:
