@@ -4,7 +4,7 @@ import os
 rowSteps = eval(sys.argv[1])
 nodeSteps = eval(sys.argv[2])
 generateMode = sys.argv[3]
-benchmarkMode = sys.arv[4]
+benchmarkMode = sys.argv[4]
 
 
 loop = 0

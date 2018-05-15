@@ -11,3 +11,346 @@ Terminated
 YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Terminated (signal 15)
 This typically refers to a problem with your application.
 Please see the FAQ page for debugging suggestions
+Traceback (most recent call last):
+  File "benchmark.py", line 7, in <module>
+    benchmarkMode = sys.arv[4]
+AttributeError: 'module' object has no attribute 'arv'
+[92mTables generated with 10 rows[0m
+[4mGenerating tables...[0m
+[94mTables generated successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.061232.143893
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.061232.143893/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.061232.143893...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.061242.396270
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.061242.396270/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.061242.396270...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.061252.564060
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.061252.564060/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.061252.564060...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.061308.956230
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.061308.956230/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.061308.956230...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.061321.883928
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.061321.883928/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.061321.883928...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+MPI row: 10 node: 1
+MPI row: 10 node: 2
+MPI row: 10 node: 3
+MPI row: 10 node: 4
+MPI row: 10 node: 5
+MPI row: 10 node: 6
+MPI row: 10 node: 7
+MPI row: 10 node: 8
+MPI row: 10 node: 9
+MPI row: 10 node: 10
+MPI row: 10 node: 20
+MPI row: 10
+MPI row: 100 node: 1
+MPI row: 100 node: 2
+MPI row: 100 node: 3
+MPI row: 100 node: 4
+MPI row: 100 node: 5
+MPI row: 100 node: 6
+MPI row: 100 node: 7
+MPI row: 100 node: 8
+MPI row: 100 node: 9
+MPI row: 100 node: 10
+MPI row: 100 node: 20
+MPI row: 100
+MPI row: 1000 node: 1
+MPI row: 1000 node: 2
+MPI row: 1000 node: 3
+MPI row: 1000 node: 4
+MPI row: 1000 node: 5
+MPI row: 1000 node: 6
+MPI row: 1000 node: 7
+MPI row: 1000 node: 8
+MPI row: 1000 node: 9
+MPI row: 1000 node: 10
+MPI row: 1000 node: 20
+MPI row: 1000
+MPI row: 10000 node: 1
+MPI row: 10000 node: 2
+MPI row: 10000 node: 3
+MPI row: 10000 node: 4
+MPI row: 10000 node: 5
+MPI row: 10000 node: 6
+MPI row: 10000 node: 7
+MPI row: 10000 node: 8
+MPI row: 10000 node: 9
+MPI row: 10000 node: 10
+MPI row: 10000 node: 20
+MPI row: 10000
+MPI row: 100000 node: 1
+MPI row: 100000 node: 2
+MPI row: 100000 node: 3
+MPI row: 100000 node: 4
+MPI row: 100000 node: 5
+MPI row: 100000 node: 6
+MPI row: 100000 node: 7
+MPI row: 100000 node: 8
+MPI row: 100000 node: 9
+MPI row: 100000 node: 10
+MPI row: 100000 node: 20
+MPI row: 100000
+[92mTables generated with 1000000 rows[0m
+[4mGenerating tables...[0m
+[94mTables generated successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.062328.622606
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.062328.622606/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.062328.622606...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+MPI row: 1000000 node: 1
+MPI row: 1000000 node: 2
+MPI row: 1000000 node: 3
+MPI row: 1000000 node: 4
+MPI row: 1000000 node: 5
+MPI row: 1000000 node: 6
+MPI row: 1000000 node: 7
+MPI row: 1000000 node: 8
+MPI row: 1000000 node: 9
+MPI row: 1000000 node: 10
+MPI row: 1000000 node: 20
+MPI row: 1000000
+[92mTables generated with 10000000 rows[0m
