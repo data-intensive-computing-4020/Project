@@ -10,3 +10,47 @@ python resultCheck.py NaiveResults.json 0 MapReduceResults.json 0 MPIResults.jso
 
 For example, one could run tests on all three scripts with row counts of 100, 1000, 10000, 100000 with node count for mpi of 1,2,4,8,16, with the best case sample data with the following command. 
 python benchmark.py "[100,1000,10000,100000]" "[1,2,4,8,16]" best MR
+
+
+This will then run 20 benchmarks for MPI (4 different sample sizes, over 5 different node counts) and 4 tests for mapreduce (4 different sample sizes) and ensure that at each output, the results are correct. The benchmark results from each execution are saved to disk, showing key run time metric parameters. An example output is shown below for MPI running on a 100000 row table
+
+***MPI Benchmark Results***
+
+
+
+
++------------+----------------+
+
+
+| Benchmark  |    Time (s)    |
+
+
++------------+----------------+
+
+
+| Processes  |       4        |
+
+
+| Read Files | 0.316300868988 |
+
+
+| Hash Join  |      0.0       |
+
+
+| Scatter    | 0.263787984848 |
+
+
+| Broadcast  | 0.32134103775  |
+
+
+| Barrier    | 0.121190071106 |
+
+
+| Gather     | 0.809396028519 |
+
+
+| Total      | 3.44939398766  |
+
+
++------------+----------------+
+
