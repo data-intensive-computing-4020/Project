@@ -57,4 +57,9 @@ This will then run 20 benchmarks for MPI (4 different sample sizes, over 5 diffe
 +------------+----------------+
 
 
+### MapReduce Reduce-Side Join
+This algorithm utilizes the [MrJob](https://github.com/Yelp/mrjob) library to implement MapReduce funtionality for the joining of 2 tables on a common column. The reduce-side join is selected and it performs the join during the reducer phase of the job. 
 
+```bash
+# To run the script
+python MRJoin.py table1.json 0 table2.json 0 output.json benchmark.txt
