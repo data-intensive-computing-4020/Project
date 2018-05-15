@@ -93,9 +93,12 @@ if len(sys.argv) != 7:
 
     sys.exit()
 
+# identify which process is running what
+sys.stdout.write(
+    "Hello, World! I am process %d of %d on %s.\n"
+    % (rank, size, name))
 
 if rank == 0:
-    # Start the timer
     startTimeFullRun = time.time()
 
     table1FileName = str(sys.argv[1])

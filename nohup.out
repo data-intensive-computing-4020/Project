@@ -700,3 +700,1247 @@ MPI row: 1000000 node: 9
 MPI row: 1000000 node: 10
 MPI row: 1000000 node: 20
 MPI row: 1000000
+[92mTables generated with 10000 rows[0m
+Hello, World! I am process 0 of 1 on dica02.
+[4mGenerating tables...[0m
+[94mTables generated successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 2 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 3 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 4 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 5 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 6 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 7 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 8 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 9 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 10 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 20 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.081043.673302
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.081043.673302/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.081043.673302...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+MPI row: 10000 node: 1
+MPI row: 10000 node: 2
+MPI row: 10000 node: 3
+MPI row: 10000 node: 4
+MPI row: 10000 node: 5
+MPI row: 10000 node: 6
+MPI row: 10000 node: 7
+MPI row: 10000 node: 8
+MPI row: 10000 node: 9
+MPI row: 10000 node: 10
+MPI row: 10000 node: 20
+MPI row: 10000
+[92mTables generated with 10000 rows[0m
+Hello, World! I am process 0 of 1 on dica02.
+[4mGenerating tables...[0m
+[94mTables generated successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 2 on dica02.
+Hello, World! I am process 1 of 2 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 3 on dica02.
+Hello, World! I am process 2 of 3 on dica03.
+Hello, World! I am process 1 of 3 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 4 on dica02.
+Hello, World! I am process 3 of 4 on dica04.
+Hello, World! I am process 1 of 4 on dica03.
+Hello, World! I am process 2 of 4 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 5 on dica02.
+Hello, World! I am process 3 of 5 on dica04.
+Hello, World! I am process 4 of 5 on dica04.
+Hello, World! I am process 2 of 5 on dica03.
+Hello, World! I am process 1 of 5 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 6 on dica02.
+Hello, World! I am process 3 of 6 on dica04.
+Hello, World! I am process 4 of 6 on dica04.
+Hello, World! I am process 1 of 6 on dica03.
+Hello, World! I am process 2 of 6 on dica03.
+Hello, World! I am process 5 of 6 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 7 on dica02.
+Hello, World! I am process 3 of 7 on dica04.
+Hello, World! I am process 4 of 7 on dica04.
+Hello, World! I am process 2 of 7 on dica03.
+Hello, World! I am process 1 of 7 on dica03.
+Hello, World! I am process 6 of 7 on dica06.
+Hello, World! I am process 5 of 7 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 8 on dica02.
+Hello, World! I am process 4 of 8 on dica04.
+Hello, World! I am process 3 of 8 on dica04.
+Hello, World! I am process 2 of 8 on dica03.
+Hello, World! I am process 1 of 8 on dica03.
+Hello, World! I am process 7 of 8 on dica07.
+Hello, World! I am process 6 of 8 on dica06.
+Hello, World! I am process 5 of 8 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 7 of 9 on dica07.
+Hello, World! I am process 0 of 9 on dica02.
+Hello, World! I am process 8 of 9 on dica07.
+Hello, World! I am process 4 of 9 on dica04.
+Hello, World! I am process 3 of 9 on dica04.
+Hello, World! I am process 1 of 9 on dica03.
+Hello, World! I am process 2 of 9 on dica03.
+Hello, World! I am process 5 of 9 on dica06.
+Hello, World! I am process 6 of 9 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 8 of 10 on dica07.
+Hello, World! I am process 7 of 10 on dica07.
+Hello, World! I am process 0 of 10 on dica02.
+Hello, World! I am process 3 of 10 on dica04.
+Hello, World! I am process 4 of 10 on dica04.
+Hello, World! I am process 2 of 10 on dica03.
+Hello, World! I am process 1 of 10 on dica03.
+Hello, World! I am process 9 of 10 on dica08.
+Hello, World! I am process 5 of 10 on dica06.
+Hello, World! I am process 6 of 10 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 8 of 20 on dica07.
+Hello, World! I am process 9 of 20 on dica08.
+Hello, World! I am process 7 of 20 on dica07.
+Hello, World! I am process 10 of 20 on dica08.
+Hello, World! I am process 13 of 20 on dica02.
+Hello, World! I am process 0 of 20 on dica02.
+Hello, World! I am process 14 of 20 on dica03.
+Hello, World! I am process 2 of 20 on dica03.
+Hello, World! I am process 1 of 20 on dica03.
+Hello, World! I am process 4 of 20 on dica04.
+Hello, World! I am process 3 of 20 on dica04.
+Hello, World! I am process 16 of 20 on dica04.
+Hello, World! I am process 15 of 20 on dica03.
+Hello, World! I am process 11 of 20 on dica09.
+Hello, World! I am process 12 of 20 on dica09.
+Hello, World! I am process 17 of 20 on dica04.
+Hello, World! I am process 6 of 20 on dica06.
+Hello, World! I am process 18 of 20 on dica06.
+Hello, World! I am process 19 of 20 on dica06.
+Hello, World! I am process 5 of 20 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.081253.055681
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.081253.055681/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.081253.055681...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+MPI row: 10000 node: 1
+MPI row: 10000 node: 2
+MPI row: 10000 node: 3
+MPI row: 10000 node: 4
+MPI row: 10000 node: 5
+MPI row: 10000 node: 6
+MPI row: 10000 node: 7
+MPI row: 10000 node: 8
+MPI row: 10000 node: 9
+MPI row: 10000 node: 10
+MPI row: 10000 node: 20
+MPI row: 10000
+[92mTables generated with 10000 rows[0m
+Hello, World! I am process 0 of 1 on dica01.
+[4mGenerating tables...[0m
+[94mTables generated successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 2 on dica01.
+Hello, World! I am process 0 of 2 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 3 on dica01.
+Hello, World! I am process 0 of 3 on dica01.
+Hello, World! I am process 2 of 3 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 4 on dica01.
+Hello, World! I am process 1 of 4 on dica01.
+Hello, World! I am process 2 of 4 on dica02.
+Hello, World! I am process 3 of 4 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 5 on dica01.
+Hello, World! I am process 0 of 5 on dica01.
+Hello, World! I am process 2 of 5 on dica02.
+Hello, World! I am process 3 of 5 on dica02.
+Hello, World! I am process 4 of 5 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 6 on dica01.
+Hello, World! I am process 1 of 6 on dica01.
+Hello, World! I am process 3 of 6 on dica02.
+Hello, World! I am process 4 of 6 on dica03.
+Hello, World! I am process 5 of 6 on dica03.
+Hello, World! I am process 2 of 6 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 7 on dica01.
+Hello, World! I am process 1 of 7 on dica01.
+Hello, World! I am process 4 of 7 on dica03.
+Hello, World! I am process 5 of 7 on dica03.
+Hello, World! I am process 2 of 7 on dica02.
+Hello, World! I am process 3 of 7 on dica02.
+Hello, World! I am process 6 of 7 on dica04.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 8 on dica01.
+Hello, World! I am process 1 of 8 on dica01.
+Hello, World! I am process 7 of 8 on dica04.
+Hello, World! I am process 6 of 8 on dica04.
+Hello, World! I am process 4 of 8 on dica03.
+Hello, World! I am process 5 of 8 on dica03.
+Hello, World! I am process 2 of 8 on dica02.
+Hello, World! I am process 3 of 8 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 6 of 9 on dica04.
+Hello, World! I am process 1 of 9 on dica01.
+Hello, World! I am process 7 of 9 on dica04.
+Hello, World! I am process 0 of 9 on dica01.
+Hello, World! I am process 4 of 9 on dica03.
+Hello, World! I am process 5 of 9 on dica03.
+Hello, World! I am process 2 of 9 on dica02.
+Hello, World! I am process 3 of 9 on dica02.
+Hello, World! I am process 8 of 9 on dica05.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 6 of 10 on dica04.
+Hello, World! I am process 7 of 10 on dica04.
+Hello, World! I am process 8 of 10 on dica05.
+Hello, World! I am process 9 of 10 on dica05.
+Hello, World! I am process 0 of 10 on dica01.
+Hello, World! I am process 1 of 10 on dica01.
+Hello, World! I am process 4 of 10 on dica03.
+Hello, World! I am process 2 of 10 on dica02.
+Hello, World! I am process 3 of 10 on dica02.
+Hello, World! I am process 5 of 10 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 20 on dica01.
+Hello, World! I am process 19 of 20 on dica01.
+Hello, World! I am process 18 of 20 on dica01.
+Hello, World! I am process 0 of 20 on dica01.
+Hello, World! I am process 14 of 20 on dica08.
+Hello, World! I am process 15 of 20 on dica08.
+Hello, World! I am process 17 of 20 on dica09.
+Hello, World! I am process 16 of 20 on dica09.
+Hello, World! I am process 8 of 20 on dica05.
+Hello, World! I am process 9 of 20 on dica05.
+Hello, World! I am process 6 of 20 on dica04.
+Hello, World! I am process 4 of 20 on dica03.
+Hello, World! I am process 7 of 20 on dica04.
+Hello, World! I am process 5 of 20 on dica03.
+Hello, World! I am process 3 of 20 on dica02.
+Hello, World! I am process 2 of 20 on dica02.
+Hello, World! I am process 13 of 20 on dica07.
+Hello, World! I am process 12 of 20 on dica07.
+Hello, World! I am process 11 of 20 on dica06.
+Hello, World! I am process 10 of 20 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.082007.801663
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.082007.801663/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.082007.801663...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+MPI row: 10000 node: 1
+MPI row: 10000 node: 2
+MPI row: 10000 node: 3
+MPI row: 10000 node: 4
+MPI row: 10000 node: 5
+MPI row: 10000 node: 6
+MPI row: 10000 node: 7
+MPI row: 10000 node: 8
+MPI row: 10000 node: 9
+MPI row: 10000 node: 10
+MPI row: 10000 node: 20
+MPI row: 10000
+[92mTables generated with 10000 rows[0m
+Hello, World! I am process 0 of 1 on dica01.
+[4mGenerating tables...[0m
+[94mTables generated successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 2 on dica01.
+Hello, World! I am process 1 of 2 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 3 on dica01.
+Hello, World! I am process 1 of 3 on dica01.
+Hello, World! I am process 2 of 3 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 4 on dica01.
+Hello, World! I am process 1 of 4 on dica01.
+Hello, World! I am process 3 of 4 on dica02.
+Hello, World! I am process 2 of 4 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 5 on dica01.
+Hello, World! I am process 1 of 5 on dica01.
+Hello, World! I am process 3 of 5 on dica02.
+Hello, World! I am process 2 of 5 on dica02.
+Hello, World! I am process 4 of 5 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 6 on dica01.
+Hello, World! I am process 1 of 6 on dica01.
+Hello, World! I am process 3 of 6 on dica02.
+Hello, World! I am process 2 of 6 on dica02.
+Hello, World! I am process 5 of 6 on dica03.
+Hello, World! I am process 4 of 6 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 7 on dica01.
+Hello, World! I am process 1 of 7 on dica01.
+Hello, World! I am process 6 of 7 on dica04.
+Hello, World! I am process 3 of 7 on dica02.
+Hello, World! I am process 2 of 7 on dica02.
+Hello, World! I am process 5 of 7 on dica03.
+Hello, World! I am process 4 of 7 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 8 on dica01.
+Hello, World! I am process 1 of 8 on dica01.
+Hello, World! I am process 2 of 8 on dica02.
+Hello, World! I am process 3 of 8 on dica02.
+Hello, World! I am process 6 of 8 on dica04.
+Hello, World! I am process 4 of 8 on dica03.
+Hello, World! I am process 7 of 8 on dica04.
+Hello, World! I am process 5 of 8 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 9 on dica01.
+Hello, World! I am process 1 of 9 on dica01.
+Hello, World! I am process 2 of 9 on dica02.
+Hello, World! I am process 3 of 9 on dica02.
+Hello, World! I am process 8 of 9 on dica05.
+Hello, World! I am process 7 of 9 on dica04.
+Hello, World! I am process 5 of 9 on dica03.
+Hello, World! I am process 6 of 9 on dica04.
+Hello, World! I am process 4 of 9 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 10 on dica01.
+Hello, World! I am process 0 of 10 on dica01.
+Hello, World! I am process 8 of 10 on dica05.
+Hello, World! I am process 9 of 10 on dica05.
+Hello, World! I am process 2 of 10 on dica02.
+Hello, World! I am process 3 of 10 on dica02.
+Hello, World! I am process 7 of 10 on dica04.
+Hello, World! I am process 5 of 10 on dica03.
+Hello, World! I am process 6 of 10 on dica04.
+Hello, World! I am process 4 of 10 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 20 on dica01.
+Hello, World! I am process 19 of 20 on dica01.
+Hello, World! I am process 0 of 20 on dica01.
+Hello, World! I am process 18 of 20 on dica01.
+Hello, World! I am process 14 of 20 on dica08.
+Hello, World! I am process 15 of 20 on dica08.
+Hello, World! I am process 2 of 20 on dica02.
+Hello, World! I am process 3 of 20 on dica02.
+Hello, World! I am process 8 of 20 on dica05.
+Hello, World! I am process 7 of 20 on dica04.
+Hello, World! I am process 5 of 20 on dica03.
+Hello, World! I am process 9 of 20 on dica05.
+Hello, World! I am process 4 of 20 on dica03.
+Hello, World! I am process 6 of 20 on dica04.
+Hello, World! I am process 17 of 20 on dica09.
+Hello, World! I am process 12 of 20 on dica07.
+Hello, World! I am process 16 of 20 on dica09.
+Hello, World! I am process 13 of 20 on dica07.
+Hello, World! I am process 11 of 20 on dica06.
+Hello, World! I am process 10 of 20 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 50 on dica01.
+Hello, World! I am process 1 of 50 on dica01.
+Hello, World! I am process 18 of 50 on dica01.
+Hello, World! I am process 19 of 50 on dica01.
+Hello, World! I am process 36 of 50 on dica01.
+Hello, World! I am process 37 of 50 on dica01.
+Hello, World! I am process 9 of 50 on dica05.
+Hello, World! I am process 44 of 50 on dica05.
+Hello, World! I am process 26 of 50 on dica05.
+Hello, World! I am process 8 of 50 on dica05.
+Hello, World! I am process 45 of 50 on dica05.
+Hello, World! I am process 27 of 50 on dica05.
+Hello, World! I am process 14 of 50 on dica08.
+Hello, World! I am process 32 of 50 on dica08.
+Hello, World! I am process 43 of 50 on dica04.
+Hello, World! I am process 15 of 50 on dica08.
+Hello, World! I am process 33 of 50 on dica08.
+Hello, World! I am process 25 of 50 on dica04.
+Hello, World! I am process 7 of 50 on dica04.
+Hello, World! I am process 34 of 50 on dica09.
+Hello, World! I am process 40 of 50 on dica03.
+Hello, World! I am process 24 of 50 on dica04.
+Hello, World! I am process 17 of 50 on dica09.
+Hello, World! I am process 16 of 50 on dica09.
+Hello, World! I am process 35 of 50 on dica09.
+Hello, World! I am process 22 of 50 on dica03.
+Hello, World! I am process 2 of 50 on dica02.
+Hello, World! I am process 20 of 50 on dica02.
+Hello, World! I am process 42 of 50 on dica04.
+Hello, World! I am process 6 of 50 on dica04.
+Hello, World! I am process 39 of 50 on dica02.
+Hello, World! I am process 3 of 50 on dica02.
+Hello, World! I am process 5 of 50 on dica03.
+Hello, World! I am process 13 of 50 on dica07.
+Hello, World! I am process 41 of 50 on dica03.
+Hello, World! I am process 49 of 50 on dica07.
+Hello, World! I am process 23 of 50 on dica03.
+Hello, World! I am process 31 of 50 on dica07.
+Hello, World! I am process 38 of 50 on dica02.
+Hello, World! I am process 48 of 50 on dica07.
+Hello, World! I am process 21 of 50 on dica02.
+Hello, World! I am process 30 of 50 on dica07.
+Hello, World! I am process 12 of 50 on dica07.
+Hello, World! I am process 46 of 50 on dica06.
+Hello, World! I am process 47 of 50 on dica06.
+Hello, World! I am process 28 of 50 on dica06.
+Hello, World! I am process 11 of 50 on dica06.
+Hello, World! I am process 10 of 50 on dica06.
+Hello, World! I am process 4 of 50 on dica03.
+Hello, World! I am process 29 of 50 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.082657.366109
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.082657.366109/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.082657.366109...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 1 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 2 on dica01.
+Hello, World! I am process 1 of 2 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 3 on dica01.
+Hello, World! I am process 1 of 3 on dica01.
+Hello, World! I am process 2 of 3 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 4 on dica01.
+Hello, World! I am process 1 of 4 on dica01.
+Hello, World! I am process 2 of 4 on dica02.
+Hello, World! I am process 3 of 4 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 5 on dica01.
+Hello, World! I am process 1 of 5 on dica01.
+Hello, World! I am process 4 of 5 on dica03.
+Hello, World! I am process 2 of 5 on dica02.
+Hello, World! I am process 3 of 5 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 6 on dica01.
+Hello, World! I am process 1 of 6 on dica01.
+Hello, World! I am process 2 of 6 on dica02.
+Hello, World! I am process 3 of 6 on dica02.
+Hello, World! I am process 5 of 6 on dica03.
+Hello, World! I am process 4 of 6 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 7 on dica01.
+Hello, World! I am process 1 of 7 on dica01.
+Hello, World! I am process 6 of 7 on dica04.
+Hello, World! I am process 3 of 7 on dica02.
+Hello, World! I am process 2 of 7 on dica02.
+Hello, World! I am process 4 of 7 on dica03.
+Hello, World! I am process 5 of 7 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 8 on dica01.
+Hello, World! I am process 0 of 8 on dica01.
+Hello, World! I am process 2 of 8 on dica02.
+Hello, World! I am process 3 of 8 on dica02.
+Hello, World! I am process 4 of 8 on dica03.
+Hello, World! I am process 7 of 8 on dica04.
+Hello, World! I am process 6 of 8 on dica04.
+Hello, World! I am process 5 of 8 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 9 on dica01.
+Hello, World! I am process 1 of 9 on dica01.
+Hello, World! I am process 8 of 9 on dica05.
+Hello, World! I am process 3 of 9 on dica02.
+Hello, World! I am process 2 of 9 on dica02.
+Hello, World! I am process 7 of 9 on dica04.
+Hello, World! I am process 6 of 9 on dica04.
+Hello, World! I am process 5 of 9 on dica03.
+Hello, World! I am process 4 of 9 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 10 on dica01.
+Hello, World! I am process 1 of 10 on dica01.
+Hello, World! I am process 8 of 10 on dica05.
+Hello, World! I am process 9 of 10 on dica05.
+Hello, World! I am process 2 of 10 on dica02.
+Hello, World! I am process 7 of 10 on dica04.
+Hello, World! I am process 3 of 10 on dica02.
+Hello, World! I am process 6 of 10 on dica04.
+Hello, World! I am process 5 of 10 on dica03.
+Hello, World! I am process 4 of 10 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 20 on dica01.
+Hello, World! I am process 1 of 20 on dica01.
+Hello, World! I am process 19 of 20 on dica01.
+Hello, World! I am process 2 of 20 on dica02.
+Hello, World! I am process 3 of 20 on dica02.
+Hello, World! I am process 18 of 20 on dica01.
+Hello, World! I am process 8 of 20 on dica05.
+Hello, World! I am process 6 of 20 on dica04.
+Hello, World! I am process 7 of 20 on dica04.
+Hello, World! I am process 9 of 20 on dica05.
+Hello, World! I am process 14 of 20 on dica08.
+Hello, World! I am process 4 of 20 on dica03.
+Hello, World! I am process 15 of 20 on dica08.
+Hello, World! I am process 17 of 20 on dica09.
+Hello, World! I am process 5 of 20 on dica03.
+Hello, World! I am process 13 of 20 on dica07.
+Hello, World! I am process 12 of 20 on dica07.
+Hello, World! I am process 16 of 20 on dica09.
+Hello, World! I am process 10 of 20 on dica06.
+Hello, World! I am process 11 of 20 on dica06.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 27 of 50 on dica05.
+Hello, World! I am process 9 of 50 on dica05.
+Hello, World! I am process 45 of 50 on dica05.
+Hello, World! I am process 44 of 50 on dica05.
+Hello, World! I am process 8 of 50 on dica05.
+Hello, World! I am process 26 of 50 on dica05.
+Hello, World! I am process 18 of 50 on dica01.
+Hello, World! I am process 0 of 50 on dica01.
+Hello, World! I am process 1 of 50 on dica01.
+Hello, World! I am process 36 of 50 on dica01.
+Hello, World! I am process 19 of 50 on dica01.
+Hello, World! I am process 37 of 50 on dica01.
+Hello, World! I am process 14 of 50 on dica08.
+Hello, World! I am process 33 of 50 on dica08.
+Hello, World! I am process 15 of 50 on dica08.
+Hello, World! I am process 42 of 50 on dica04.
+Hello, World! I am process 32 of 50 on dica08.
+Hello, World! I am process 4 of 50 on dica03.
+Hello, World! I am process 46 of 50 on dica06.
+Hello, World! I am process 31 of 50 on dica07.
+Hello, World! I am process 35 of 50 on dica09.
+Hello, World! I am process 34 of 50 on dica09.
+Hello, World! I am process 39 of 50 on dica02.
+Hello, World! I am process 17 of 50 on dica09.
+Hello, World! I am process 25 of 50 on dica04.
+Hello, World! I am process 43 of 50 on dica04.
+Hello, World! I am process 24 of 50 on dica04.
+Hello, World! I am process 40 of 50 on dica03.
+Hello, World! I am process 10 of 50 on dica06.
+Hello, World! I am process 20 of 50 on dica02.
+Hello, World! I am process 38 of 50 on dica02.
+Hello, World! I am process 5 of 50 on dica03.
+Hello, World! I am process 2 of 50 on dica02.
+Hello, World! I am process 22 of 50 on dica03.
+Hello, World! I am process 29 of 50 on dica06.
+Hello, World! I am process 47 of 50 on dica06.
+Hello, World! I am process 16 of 50 on dica09.
+Hello, World! I am process 6 of 50 on dica04.
+Hello, World! I am process 41 of 50 on dica03.
+Hello, World! I am process 13 of 50 on dica07.
+Hello, World! I am process 7 of 50 on dica04.
+Hello, World! I am process 30 of 50 on dica07.
+Hello, World! I am process 12 of 50 on dica07.
+Hello, World! I am process 28 of 50 on dica06.
+Hello, World! I am process 23 of 50 on dica03.
+Hello, World! I am process 11 of 50 on dica06.
+Hello, World! I am process 48 of 50 on dica07.
+Hello, World! I am process 49 of 50 on dica07.
+Hello, World! I am process 21 of 50 on dica02.
+Hello, World! I am process 3 of 50 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.082715.851549
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.082715.851549/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.082715.851549...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+MPI row: 10000 node: 1
+MPI row: 10000 node: 2
+MPI row: 10000 node: 3
+MPI row: 10000 node: 4
+MPI row: 10000 node: 5
+MPI row: 10000 node: 6
+MPI row: 10000 node: 7
+MPI row: 10000 node: 8
+MPI row: 10000 node: 9
+MPI row: 10000 node: 10
+MPI row: 10000 node: 20
+MPI row: 10000 node: 50
+MPI row: 10000
+MPI row: 100000 node: 1
+MPI row: 100000 node: 2
+MPI row: 100000 node: 3
+MPI row: 100000 node: 4
+MPI row: 100000 node: 5
+MPI row: 100000 node: 6
+MPI row: 100000 node: 7
+MPI row: 100000 node: 8
+MPI row: 100000 node: 9
+MPI row: 100000 node: 10
+MPI row: 100000 node: 20
+MPI row: 100000 node: 50
+MPI row: 100000
+[92mTables generated with 100000 rows[0m
+Hello, World! I am process 0 of 1 on dica01.
+[4mGenerating tables...[0m
+[94mTables generated successfully
+[0m
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 2 on dica01.
+Hello, World! I am process 1 of 2 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 3 on dica01.
+Hello, World! I am process 1 of 3 on dica01.
+Hello, World! I am process 2 of 3 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 4 on dica01.
+Hello, World! I am process 0 of 4 on dica01.
+Hello, World! I am process 3 of 4 on dica02.
+Hello, World! I am process 2 of 4 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 5 on dica01.
+Hello, World! I am process 0 of 5 on dica01.
+Hello, World! I am process 2 of 5 on dica02.
+Hello, World! I am process 3 of 5 on dica02.
+Hello, World! I am process 4 of 5 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 2 of 6 on dica02.
+Hello, World! I am process 3 of 6 on dica02.
+Hello, World! I am process 1 of 6 on dica01.
+Hello, World! I am process 0 of 6 on dica01.
+Hello, World! I am process 5 of 6 on dica03.
+Hello, World! I am process 4 of 6 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 7 on dica01.
+Hello, World! I am process 1 of 7 on dica01.
+Hello, World! I am process 2 of 7 on dica02.
+Hello, World! I am process 3 of 7 on dica02.
+Hello, World! I am process 6 of 7 on dica04.
+Hello, World! I am process 4 of 7 on dica03.
+Hello, World! I am process 5 of 7 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 8 on dica01.
+Hello, World! I am process 1 of 8 on dica01.
+Hello, World! I am process 2 of 8 on dica02.
+Hello, World! I am process 4 of 8 on dica03.
+Hello, World! I am process 5 of 8 on dica03.
+Hello, World! I am process 3 of 8 on dica02.
+Hello, World! I am process 7 of 8 on dica04.
+Hello, World! I am process 6 of 8 on dica04.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 9 on dica01.
+Hello, World! I am process 1 of 9 on dica01.
+Hello, World! I am process 3 of 9 on dica02.
+Hello, World! I am process 8 of 9 on dica05.
+Hello, World! I am process 2 of 9 on dica02.
+Hello, World! I am process 7 of 9 on dica04.
+Hello, World! I am process 6 of 9 on dica04.
+Hello, World! I am process 4 of 9 on dica03.
+Hello, World! I am process 5 of 9 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 10 on dica01.
+Hello, World! I am process 1 of 10 on dica01.
+Hello, World! I am process 9 of 10 on dica05.
+Hello, World! I am process 8 of 10 on dica05.
+Hello, World! I am process 2 of 10 on dica02.
+Hello, World! I am process 3 of 10 on dica02.
+Hello, World! I am process 5 of 10 on dica03.
+Hello, World! I am process 6 of 10 on dica04.
+Hello, World! I am process 7 of 10 on dica04.
+Hello, World! I am process 4 of 10 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.083200.484152
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.083200.484152/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.083200.484152...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 1 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 2 on dica01.
+Hello, World! I am process 0 of 2 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 3 on dica01.
+Hello, World! I am process 1 of 3 on dica01.
+Hello, World! I am process 2 of 3 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 2 of 4 on dica02.
+Hello, World! I am process 3 of 4 on dica02.
+Hello, World! I am process 0 of 4 on dica01.
+Hello, World! I am process 1 of 4 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 5 on dica01.
+Hello, World! I am process 1 of 5 on dica01.
+Hello, World! I am process 3 of 5 on dica02.
+Hello, World! I am process 2 of 5 on dica02.
+Hello, World! I am process 4 of 5 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 6 on dica01.
+Hello, World! I am process 1 of 6 on dica01.
+Hello, World! I am process 2 of 6 on dica02.
+Hello, World! I am process 3 of 6 on dica02.
+Hello, World! I am process 5 of 6 on dica03.
+Hello, World! I am process 4 of 6 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 7 on dica01.
+Hello, World! I am process 0 of 7 on dica01.
+Hello, World! I am process 3 of 7 on dica02.
+Hello, World! I am process 2 of 7 on dica02.
+Hello, World! I am process 6 of 7 on dica04.
+Hello, World! I am process 5 of 7 on dica03.
+Hello, World! I am process 4 of 7 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 8 on dica01.
+Hello, World! I am process 1 of 8 on dica01.
+Hello, World! I am process 7 of 8 on dica04.
+Hello, World! I am process 6 of 8 on dica04.
+Hello, World! I am process 3 of 8 on dica02.
+Hello, World! I am process 4 of 8 on dica03.
+Hello, World! I am process 2 of 8 on dica02.
+Hello, World! I am process 5 of 8 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 6 of 9 on dica04.
+Hello, World! I am process 7 of 9 on dica04.
+Hello, World! I am process 3 of 9 on dica02.
+Hello, World! I am process 1 of 9 on dica01.
+Hello, World! I am process 2 of 9 on dica02.
+Hello, World! I am process 0 of 9 on dica01.
+Hello, World! I am process 5 of 9 on dica03.
+Hello, World! I am process 4 of 9 on dica03.
+Hello, World! I am process 8 of 9 on dica05.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 10 on dica01.
+Hello, World! I am process 1 of 10 on dica01.
+Hello, World! I am process 2 of 10 on dica02.
+Hello, World! I am process 3 of 10 on dica02.
+Hello, World! I am process 6 of 10 on dica04.
+Hello, World! I am process 7 of 10 on dica04.
+Hello, World! I am process 8 of 10 on dica05.
+Hello, World! I am process 9 of 10 on dica05.
+Hello, World! I am process 5 of 10 on dica03.
+Hello, World! I am process 4 of 10 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.083259.228467
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.083259.228467/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.083259.228467...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 1 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 2 on dica01.
+Hello, World! I am process 1 of 2 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 3 on dica01.
+Hello, World! I am process 1 of 3 on dica01.
+Hello, World! I am process 2 of 3 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 2 of 4 on dica02.
+Hello, World! I am process 0 of 4 on dica01.
+Hello, World! I am process 1 of 4 on dica01.
+Hello, World! I am process 3 of 4 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 5 on dica01.
+Hello, World! I am process 1 of 5 on dica01.
+Hello, World! I am process 2 of 5 on dica02.
+Hello, World! I am process 3 of 5 on dica02.
+Hello, World! I am process 4 of 5 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 6 on dica01.
+Hello, World! I am process 0 of 6 on dica01.
+Hello, World! I am process 2 of 6 on dica02.
+Hello, World! I am process 3 of 6 on dica02.
+Hello, World! I am process 5 of 6 on dica03.
+Hello, World! I am process 4 of 6 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 7 on dica01.
+Hello, World! I am process 1 of 7 on dica01.
+Hello, World! I am process 2 of 7 on dica02.
+Hello, World! I am process 3 of 7 on dica02.
+Hello, World! I am process 6 of 7 on dica04.
+Hello, World! I am process 5 of 7 on dica03.
+Hello, World! I am process 4 of 7 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 2 of 8 on dica02.
+Hello, World! I am process 3 of 8 on dica02.
+Hello, World! I am process 4 of 8 on dica03.
+Hello, World! I am process 5 of 8 on dica03.
+Hello, World! I am process 0 of 8 on dica01.
+Hello, World! I am process 1 of 8 on dica01.
+Hello, World! I am process 7 of 8 on dica04.
+Hello, World! I am process 6 of 8 on dica04.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 3 of 9 on dica02.
+Hello, World! I am process 0 of 9 on dica01.
+Hello, World! I am process 1 of 9 on dica01.
+Hello, World! I am process 4 of 9 on dica03.
+Hello, World! I am process 5 of 9 on dica03.
+Hello, World! I am process 6 of 9 on dica04.
+Hello, World! I am process 2 of 9 on dica02.
+Hello, World! I am process 7 of 9 on dica04.
+Hello, World! I am process 8 of 9 on dica05.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 5 of 10 on dica03.
+Hello, World! I am process 4 of 10 on dica03.
+Hello, World! I am process 0 of 10 on dica01.
+Hello, World! I am process 1 of 10 on dica01.
+Hello, World! I am process 7 of 10 on dica04.
+Hello, World! I am process 9 of 10 on dica05.
+Hello, World! I am process 6 of 10 on dica04.
+Hello, World! I am process 8 of 10 on dica05.
+Hello, World! I am process 2 of 10 on dica02.
+Hello, World! I am process 3 of 10 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.083354.370437
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.083354.370437/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.083354.370437...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 1 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 2 on dica01.
+Hello, World! I am process 1 of 2 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 2 of 3 on dica02.
+Hello, World! I am process 0 of 3 on dica01.
+Hello, World! I am process 1 of 3 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 2 of 4 on dica02.
+Hello, World! I am process 3 of 4 on dica02.
+Hello, World! I am process 0 of 4 on dica01.
+Hello, World! I am process 1 of 4 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 5 on dica01.
+Hello, World! I am process 0 of 5 on dica01.
+Hello, World! I am process 4 of 5 on dica03.
+Hello, World! I am process 2 of 5 on dica02.
+Hello, World! I am process 3 of 5 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 2 of 6 on dica02.
+Hello, World! I am process 3 of 6 on dica02.
+Hello, World! I am process 0 of 6 on dica01.
+Hello, World! I am process 1 of 6 on dica01.
+Hello, World! I am process 4 of 6 on dica03.
+Hello, World! I am process 5 of 6 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 7 on dica01.
+Hello, World! I am process 5 of 7 on dica03.
+Hello, World! I am process 1 of 7 on dica01.
+Hello, World! I am process 2 of 7 on dica02.
+Hello, World! I am process 3 of 7 on dica02.
+Hello, World! I am process 4 of 7 on dica03.
+Hello, World! I am process 6 of 7 on dica04.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 8 on dica01.
+Hello, World! I am process 1 of 8 on dica01.
+Hello, World! I am process 3 of 8 on dica02.
+Hello, World! I am process 2 of 8 on dica02.
+Hello, World! I am process 7 of 8 on dica04.
+Hello, World! I am process 6 of 8 on dica04.
+Hello, World! I am process 4 of 8 on dica03.
+Hello, World! I am process 5 of 8 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 9 on dica01.
+Hello, World! I am process 0 of 9 on dica01.
+Hello, World! I am process 2 of 9 on dica02.
+Hello, World! I am process 3 of 9 on dica02.
+Hello, World! I am process 6 of 9 on dica04.
+Hello, World! I am process 7 of 9 on dica04.
+Hello, World! I am process 5 of 9 on dica03.
+Hello, World! I am process 4 of 9 on dica03.
+Hello, World! I am process 8 of 9 on dica05.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 10 on dica01.
+Hello, World! I am process 1 of 10 on dica01.
+Hello, World! I am process 9 of 10 on dica05.
+Hello, World! I am process 2 of 10 on dica02.
+Hello, World! I am process 3 of 10 on dica02.
+Hello, World! I am process 8 of 10 on dica05.
+Hello, World! I am process 5 of 10 on dica03.
+Hello, World! I am process 7 of 10 on dica04.
+Hello, World! I am process 6 of 10 on dica04.
+Hello, World! I am process 4 of 10 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.083448.924610
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.083448.924610/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.083448.924610...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 1 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 2 on dica01.
+Hello, World! I am process 1 of 2 on dica01.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 3 on dica01.
+Hello, World! I am process 1 of 3 on dica01.
+Hello, World! I am process 2 of 3 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 4 on dica01.
+Hello, World! I am process 1 of 4 on dica01.
+Hello, World! I am process 2 of 4 on dica02.
+Hello, World! I am process 3 of 4 on dica02.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 5 on dica01.
+Hello, World! I am process 1 of 5 on dica01.
+Hello, World! I am process 3 of 5 on dica02.
+Hello, World! I am process 2 of 5 on dica02.
+Hello, World! I am process 4 of 5 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 6 on dica01.
+Hello, World! I am process 1 of 6 on dica01.
+Hello, World! I am process 3 of 6 on dica02.
+Hello, World! I am process 2 of 6 on dica02.
+Hello, World! I am process 5 of 6 on dica03.
+Hello, World! I am process 4 of 6 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 7 on dica01.
+Hello, World! I am process 1 of 7 on dica01.
+Hello, World! I am process 3 of 7 on dica02.
+Hello, World! I am process 2 of 7 on dica02.
+Hello, World! I am process 6 of 7 on dica04.
+Hello, World! I am process 4 of 7 on dica03.
+Hello, World! I am process 5 of 7 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 1 of 8 on dica01.
+Hello, World! I am process 0 of 8 on dica01.
+Hello, World! I am process 2 of 8 on dica02.
+Hello, World! I am process 6 of 8 on dica04.
+Hello, World! I am process 7 of 8 on dica04.
+Hello, World! I am process 3 of 8 on dica02.
+Hello, World! I am process 5 of 8 on dica03.
+Hello, World! I am process 4 of 8 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 3 of 9 on dica02.
+Hello, World! I am process 0 of 9 on dica01.
+Hello, World! I am process 1 of 9 on dica01.
+Hello, World! I am process 2 of 9 on dica02.
+Hello, World! I am process 7 of 9 on dica04.
+Hello, World! I am process 6 of 9 on dica04.
+Hello, World! I am process 8 of 9 on dica05.
+Hello, World! I am process 4 of 9 on dica03.
+Hello, World! I am process 5 of 9 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+Hello, World! I am process 0 of 10 on dica01.
+Hello, World! I am process 1 of 10 on dica01.
+Hello, World! I am process 2 of 10 on dica02.
+Hello, World! I am process 3 of 10 on dica02.
+Hello, World! I am process 9 of 10 on dica05.
+Hello, World! I am process 8 of 10 on dica05.
+Hello, World! I am process 6 of 10 on dica04.
+Hello, World! I am process 7 of 10 on dica04.
+Hello, World! I am process 5 of 10 on dica03.
+Hello, World! I am process 4 of 10 on dica03.
+[4mJoining over MPI cluster...[0m
+[94mMPI cluster join successfully
+[0m
+No configs found; falling back on auto-configuration
+No configs specified for inline runner
+Running step 1 of 2...
+Creating temp directory /tmp/MRJoin.sedic007.20180515.083545.670725
+Running step 2 of 2...
+Streaming final output from /tmp/MRJoin.sedic007.20180515.083545.670725/output...
+Removing temp directory /tmp/MRJoin.sedic007.20180515.083545.670725...
+[4mJoining over MRJoin...[0m
+[94mMPI cluster join successfully
+[0m
+MPI row: 100000 node: 1
+MPI row: 100000 node: 2
+MPI row: 100000 node: 3
+MPI row: 100000 node: 4
+MPI row: 100000 node: 5
+MPI row: 100000 node: 6
+MPI row: 100000 node: 7
+MPI row: 100000 node: 8
+MPI row: 100000 node: 9
+MPI row: 100000 node: 10
+MPI row: 100000
+MPI row: 250000 node: 1
+MPI row: 250000 node: 2
+MPI row: 250000 node: 3
+MPI row: 250000 node: 4
+MPI row: 250000 node: 5
+MPI row: 250000 node: 6
+MPI row: 250000 node: 7
+MPI row: 250000 node: 8
+MPI row: 250000 node: 9
+MPI row: 250000 node: 10
+MPI row: 250000
+MPI row: 500000 node: 1
+MPI row: 500000 node: 2
+MPI row: 500000 node: 3
+MPI row: 500000 node: 4
+MPI row: 500000 node: 5
+MPI row: 500000 node: 6
+MPI row: 500000 node: 7
+MPI row: 500000 node: 8
+MPI row: 500000 node: 9
+MPI row: 500000 node: 10
+MPI row: 500000
+MPI row: 750000 node: 1
+MPI row: 750000 node: 2
+MPI row: 750000 node: 3
+MPI row: 750000 node: 4
+MPI row: 750000 node: 5
+MPI row: 750000 node: 6
+MPI row: 750000 node: 7
+MPI row: 750000 node: 8
+MPI row: 750000 node: 9
+MPI row: 750000 node: 10
+MPI row: 750000
+MPI row: 1000000 node: 1
+MPI row: 1000000 node: 2
+MPI row: 1000000 node: 3
+MPI row: 1000000 node: 4
+MPI row: 1000000 node: 5
+MPI row: 1000000 node: 6
+MPI row: 1000000 node: 7
+MPI row: 1000000 node: 8
+MPI row: 1000000 node: 9
+MPI row: 1000000 node: 10
+MPI row: 1000000
