@@ -26,7 +26,7 @@ The Naive algorithm that utilizes two nested for loops.
 python Naive.py table1.json 0 table2.json 0 output.json benchmark.txt
 ```
 
-
+## Utility Scripts
 ### Benchmark Script
 This script calls both the generator and the controller scripts in order to automate and make the testing process simple. This file only works in the context of running on the jaguar cluster as the machinefile is configured for the cluster. For example, one could run tests on all three scripts with row counts of 100, 1000, 10000, 100000 with node count for mpi of 1,2,4,8,16, with the best case sample data with the following command. 
 
