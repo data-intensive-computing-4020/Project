@@ -1,7 +1,6 @@
 # The MapReduce reduce-side join algorithm
 # Input execution command: python MRJoin.py <table 1 in json format> <x> <table 2 in json format> <x> <join output file> <Benchmark time output file>
-# Where x and y are the attribute to join with
-
+# Where x and y are the column indices to join on.
 from mrjob.job import MRJob
 from mrjob.step import MRStep
 from prettytable import PrettyTable

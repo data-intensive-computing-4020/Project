@@ -1,4 +1,7 @@
-# Group 7 MPI Hash-Join Algorithm
+# The MPI hash join algorithm
+# Input execution command: python MPI_Clean.py <table1FileName> <x> <table1FileName> <x> <tableoutFileName> <BenchmarkFileName>
+# Please ensure that the table1, table2 and tableout file name are in the correct JSON format
+# Where x and y are the attribute to join with
 
 from __future__ import unicode_literals
 import json
