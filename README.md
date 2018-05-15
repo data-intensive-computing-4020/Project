@@ -8,7 +8,7 @@ This algorithm makes use of the mpi4py library to implement a distributed MPI jo
 python MPIJoin.py table1.json 0 table2.json 0 output.json benchmark.txt
 
 # To run the Collective communication MPI implemention:
-python MPIJoin_Send_Recv.py table1.json 0 table2.json 0 output.json benchmark.txt
+python MPIJoin_Send_Recive.py  table1.json 0 table2.json 0 output.json benchmark.txt
 ```
 ### MapReduce Reduce-Side Join
 This algorithm utilizes the [MrJob](https://github.com/Yelp/mrjob) library to implement MapReduce funtionality for the joining of 2 tables on a common column. The reduce-side join is selected and it performs the join during the reducer phase of the job. 
