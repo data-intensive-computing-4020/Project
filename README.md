@@ -1,6 +1,6 @@
 # ELEN4020 - Data Intensive Computing
 ## Project - Equi-join of Relational Databases
-
+Some prior input data was generated and is ocntained in the repo. This allows for one to run the the individual algorithms without the utility scripts. 
 ### MPI Hash Join 
 This algorithm makes use of the mpi4py library to implement a distributed MPI join algorithm. Please see MPIJoin_Clean.py for a clear code base without timing to see how the code works.
 ```bash
