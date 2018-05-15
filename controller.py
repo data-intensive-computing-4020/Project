@@ -1,5 +1,13 @@
+#    _____            _             _ _
+#  / ____|          | |           | | |
+# | |     ___  _ __ | |_ _ __ ___ | | | ___ _ __
+# | |    / _ \| '_ \| __| '__/ _ \| | |/ _ \ '__|
+# | |___| (_) | | | | |_| | | (_) | | |  __/ |
+#  \_____\___/|_| |_|\__|_|  \___/|_|_|\___|_|
+
 # Script to run all benchmarks in turn and print results. Script starts by generating data of specified size, calling
 # naive, MPI then mapreduce. lastly, the results are checked for integrity with the resultCheck.py script
+# This script is called by controller.py and is not required to be run independently
 import sys
 import os
 from colours import bcolors

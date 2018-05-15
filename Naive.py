@@ -1,3 +1,18 @@
+#  _   _       _                      _                  _ _   _
+# | \ | |     (_)               /\   | |                (_) | | |
+# |  \| | __ _ ___   _____     /  \  | | __ _  ___  _ __ _| |_| |__  _ __ ___
+# | . ` |/ _` | \ \ / / _ \   / /\ \ | |/ _` |/ _ \| '__| | __| '_ \| '_ ` _ \
+# | |\  | (_| | |\ V /  __/  / ____ \| | (_| | (_) | |  | | |_| | | | | | | | |
+# |_| \_|\__,_|_| \_/ \___| /_/    \_\_|\__, |\___/|_|  |_|\__|_| |_|_| |_| |_|
+#                                        __/ |
+#                                       |___/
+# The Naive algorithm that utilizes two nested for loops
+# Input execution command: python Naive.py <table1FileName> <x> <table1FileName> <x> <tableoutFileName> <BenchmarkFileName>
+# Please ensure that the table1, table2 and tableout file name are in JSON format
+# Please specify the name of the BenchmarkFileName and ensure that it is a .txt file
+# Where x and y are the column indices to join on.
+
+
 import re
 import os
 import sys

@@ -1,3 +1,15 @@
+#   ____                  _                          _
+# |  _ \                | |                        | |
+# | |_) | ___ _ __   ___| |__  _ __ ___   __ _ _ __| | _____ _ __
+# |  _ < / _ \ '_ \ / __| '_ \| '_ ` _ \ / _` | '__| |/ / _ \ '__|
+# | |_) |  __/ | | | (__| | | | | | | | | (_| | |  |   <  __/ |
+# |____/ \___|_| |_|\___|_| |_|_| |_| |_|\__,_|_|  |_|\_\___|_|
+# This script calls both the generator and the controller scripts in order to automate and make the testing process simple
+# This file only works in the context of running on the jaguar cluster as the machinefile is configured for that
+# Input execution command: python benchmark.py "<Array of file sizes>" "<Array of number of processes>" equal MR
+# equal specifies to use tables of equal sizes and MR states that the Mapreduce and MPI scripts should be called
+
+
 import sys
 import os
 

@@ -1,6 +1,17 @@
+#   __  __             _____          _                  _____          _                       _____ _     _          _       _
+# |  \/  |           |  __ \        | |                |  __ \        | |                     / ____(_)   | |        (_)     (_)
+# | \  / | __ _ _ __ | |__) |___  __| |_   _  ___ ___  | |__) |___  __| |_   _  ___ ___ _____| (___  _  __| | ___     _  ___  _ _ __
+# | |\/| |/ _` | '_ \|  _  // _ \/ _` | | | |/ __/ _ \ |  _  // _ \/ _` | | | |/ __/ _ \______\___ \| |/ _` |/ _ \   | |/ _ \| | '_ \
+# | |  | | (_| | |_) | | \ \  __/ (_| | |_| | (_|  __/ | | \ \  __/ (_| | |_| | (_|  __/      ____) | | (_| |  __/   | | (_) | | | | |
+# |_|  |_|\__,_| .__/|_|  \_\___|\__,_|\__,_|\___\___| |_|  \_\___|\__,_|\__,_|\___\___|     |_____/|_|\__,_|\___|   | |\___/|_|_| |_|
+#              | |                                                                                                  _/ |
+#              |_|                                                                                                 |__/
 # The MapReduce reduce-side join algorithm
-# Input execution command: python MRJoin.py <table 1 in json format> <x> <table 2 in json format> <x> <join output file> <Benchmark time output file>
+# Input execution command: python MPI_Join.py <table1FileName> <x> <table1FileName> <x> <tableoutFileName> <BenchmarkFileName>
+# Please ensure that the table1, table2 and tableout file name are in JSON format
+# Please specify the name of the BenchmarkFileName and ensure that it is a .txt file
 # Where x and y are the column indices to join on.
+
 from mrjob.job import MRJob
 from mrjob.step import MRStep
 from prettytable import PrettyTable

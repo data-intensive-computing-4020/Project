@@ -1,7 +1,16 @@
-# The MPI hash join algorithm
+#  __  __ _____ _____   _    _           _            _       _
+# |  \/  |  __ \_   _| | |  | |         | |          | |     (_)
+# | \  / | |__) || |   | |__| | __ _ ___| |__        | | ___  _ _ __
+# | |\/| |  ___/ | |   |  __  |/ _` / __| '_ \   _   | |/ _ \| | '_ \
+# | |  | | |    _| |_  | |  | | (_| \__ \ | | | | |__| | (_) | | | | |
+# |_|  |_|_|   |_____| |_|  |_|\__,_|___/_| |_|  \____/ \___/|_|_| |_|
+# The MPI hash join algorithm without timing for clarity
+# This algorithm makes use of the mpi4py library to implement a distributed MPI join algorithm.
+# This File makes use of the  collective communication paradigm through the use of the scatter, gather, broadcast and barrier commands, found withing mpi
 # Input execution command: python MPI_Clean.py <table1FileName> <x> <table1FileName> <x> <tableoutFileName> <BenchmarkFileName>
-# Please ensure that the table1, table2 and tableout file name are in the correct JSON format
-# Where x and y are the attribute to join with
+# Please ensure that the table1, table2 and tableout file name are in JSON format
+# Please specify the name of the BenchmarkFileName and ensure that it is a .txt file
+# Where x and y are the column indices to join on.
 
 from __future__ import unicode_literals
 import json

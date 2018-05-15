@@ -1,4 +1,11 @@
-# Basic utility to generate data sets for benchmaring join algorithms.
+#    _____                           _
+#  / ____|                         | |
+# | |  __  ___ _ __   ___ _ __ __ _| |_ ___  _ __
+# | | |_ |/ _ \ '_ \ / _ \ '__/ _` | __/ _ \| '__|
+# | |__| |  __/ | | |  __/ | | (_| | || (_) | |
+#  \_____|\___|_| |_|\___|_|  \__,_|\__\___/|_|
+# Basic utility to generate data sets for benchmarking join algorithms.
+# This script is called by controller.py and is not required to be run independently
 import sys
 import json
 from colours import bcolors
